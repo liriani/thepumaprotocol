@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <defs>
+    <linearGradient id="pumaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a90e2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9013fe;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <g transform="translate(150,150)">
+    <path d="M-80,-100 L80,-100 L100,0 L0,120 L-100,0 Z" fill="none" stroke="url(#pumaGradient)" stroke-width="5"/>
+    <path d="M-50,-40 C-20,-70 20,-70 50,-40 C60,-20 70,10 50,40 C20,70 -20,70 -50,40 C-70,10 -60,-20 -50,-40 Z" fill="url(#pumaGradient)"/>
+    <circle cx="-30" cy="-10" r="5" fill="#fff"/>
+    <circle cx="30" cy="-10" r="5" fill="#fff"/>
+    <path d="M-10,20 L10,20 L0,40 Z" fill="#fff"/>
+    <path d="M-70,50 L-90,80 M70,50 L90,80" stroke="url(#pumaGradient)" stroke-width="3"/>
+    <circle cx="-90" cy="80" r="8" fill="url(#pumaGradient)"/>
+    <circle cx="90" cy="80" r="8" fill="url(#pumaGradient)"/>
+    <text x="0" y="150" font-family="sans-serif" font-size="24" font-weight="bold" fill="url(#pumaGradient)" text-anchor="middle">PUMA PROTOCOL</text>
+  </g>
+</svg>
