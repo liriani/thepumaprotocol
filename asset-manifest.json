@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/thepumaprotocol/static/css/main.c1ff3078.css",
+    "main.js": "/thepumaprotocol/static/js/main.f17b77c8.js",
+    "index.html": "/thepumaprotocol/index.html",
+    "main.c1ff3078.css.map": "/thepumaprotocol/static/css/main.c1ff3078.css.map",
+    "main.f17b77c8.js.map": "/thepumaprotocol/static/js/main.f17b77c8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c1ff3078.css",
+    "static/js/main.f17b77c8.js"
+  ]
+}
