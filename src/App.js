@@ -28,25 +28,16 @@ import {
     Skull
 } from 'lucide-react';
 
-// --- Game Data & Script ---
-
 const MISSIONS = {
-    // PETS (Priority Alpha)
     LITTER: { id: 'litter', category: 'pets', title: 'Bio-Hazard (Monk Protocol)', icon: <Cat size={16} />, completed: false },
     WATER: { id: 'water', category: 'pets', title: 'Eco-Hydration (Priscilão)', icon: <Droplets size={16} />, completed: false },
     DOGFOOD: { id: 'dogfood', category: 'pets', title: 'K9 Sustenance (Puma)', icon: <Dog size={16} />, completed: false },
-
-    // HOUSE (Priority Beta)
     SHEETS: { id: 'sheets', category: 'house', title: 'Fabric Reset (Cali Roll)', icon: <Bed size={16} />, completed: false },
     VACUUM: { id: 'vacuum', category: 'house', title: 'Debris Removal (Vacuum)', icon: <Wind size={16} />, completed: false },
     TRASH: { id: 'trash', category: 'house', title: 'Waste Extraction (Trash)', icon: <Trash2 size={16} />, completed: false },
-
-    // SELF (Priority Gamma)
     HYDRATE_SELF: { id: 'hydrate_self', category: 'self', title: 'Operator Fuel (Water)', icon: <Coffee size={16} />, completed: false },
     GRAPHIC_NOVEL: { id: 'graphic_novel', category: 'self', title: 'Creative Mode (Graphic Novel)', icon: <PenTool size={16} />, completed: false },
     SNACK: { id: 'snack', category: 'self', title: 'Dopamine Input (Snack)', icon: <Sparkles size={16} />, completed: false },
-
-    // BOSS (Priority Omega)
     SELFCARE: { id: 'selfcare', category: 'boss', title: 'FINAL BOSS: The Gauntlet', icon: <Skull size={16} />, completed: false },
 };
 
@@ -136,8 +127,6 @@ const SCRIPT = {
         location: 'HQ',
         isHub: true
     },
-
-    // --- LITTER MISSION ---
     LITTER_START: {
         id: 'LITTER_START',
         speaker: 'Operator (London)',
@@ -213,8 +202,6 @@ const SCRIPT = {
             { text: "Warp back to Base.", next: 'HUB' }
         ]
     },
-
-    // --- VACUUM MISSION ---
     VACUUM_START: {
         id: 'VACUUM_START',
         speaker: 'Operator (London)',
@@ -253,8 +240,6 @@ const SCRIPT = {
             { text: "Warp back to Base.", next: 'HUB' }
         ]
     },
-
-    // --- TRASH MISSION ---
     TRASH_START: {
         id: 'TRASH_START',
         speaker: 'Operator (London)',
@@ -293,8 +278,6 @@ const SCRIPT = {
             { text: "Warp back to Base.", next: 'HUB' }
         ]
     },
-
-    // --- SHEETS MISSION ---
     SHEETS_START: {
         id: 'SHEETS_START',
         speaker: 'Operator (London)',
@@ -351,8 +334,6 @@ const SCRIPT = {
             { text: "Warp back to Base.", next: 'HUB' }
         ]
     },
-
-    // --- WATER MISSION ---
     WATER_START: {
         id: 'WATER_START',
         speaker: 'Operator (London)',
@@ -400,8 +381,6 @@ const SCRIPT = {
             { text: "Warp back to Base.", next: 'HUB' }
         ]
     },
-
-    // --- BOSS MISSION: THE WALK ---
     SELFCARE_START: {
         id: 'SELFCARE_START',
         speaker: 'System',
@@ -471,8 +450,6 @@ const SCRIPT = {
             { text: "Warp back to Base.", next: 'HUB' }
         ]
     },
-
-    // --- GRAPHIC NOVEL MISSION ---
     GRAPHIC_NOVEL_START: {
         id: 'GRAPHIC_NOVEL_START',
         speaker: 'Operator (London)',
@@ -501,8 +478,6 @@ const SCRIPT = {
             { text: "Warp back to Base.", next: 'HUB' }
         ]
     },
-
-    // --- HYDRATE SELF MISSION ---
     HYDRATE_SELF_START: {
         id: 'HYDRATE_SELF_START',
         speaker: 'Operator (London)',
@@ -531,8 +506,6 @@ const SCRIPT = {
             { text: "Warp back to Base.", next: 'HUB' }
         ]
     },
-
-    // --- SNACK MISSION ---
     SNACK_START: {
         id: 'SNACK_START',
         speaker: 'Operator (London)',
@@ -561,8 +534,6 @@ const SCRIPT = {
             { text: "Warp back to Base.", next: 'HUB' }
         ]
     },
-
-    // --- DOG FOOD MISSION (Looping Drama) ---
     DOGFOOD_START: {
         id: 'DOGFOOD_START',
         speaker: 'Operator (London)',
@@ -660,8 +631,6 @@ const SCRIPT = {
             { text: "Accept Defeat: Return to Hub.", next: 'HUB' }
         ]
     },
-
-    // --- END GAME ---
     ALL_COMPLETE: {
         id: 'ALL_COMPLETE',
         speaker: 'Operator (London)',
@@ -691,7 +660,6 @@ const SCRIPT = {
     }
 };
 
-// --- Components ---
 
 const Typewriter = ({ text, speed = 20 }) => {
     const [displayedText, setDisplayedText] = useState('');
@@ -732,8 +700,6 @@ const ProgressBar = ({ current, total }) => (
 const CoverScreen = ({ onStart, onInfo }) => {
     return (
         <div className="flex flex-col items-center justify-center h-full w-full bg-slate-950/50 p-6 relative z-10">
-
-            {/* Animated Dog Icon */}
             <div className="relative mb-8 group">
                 <div className="absolute inset-0 bg-cyan-500/20 blur-xl rounded-full animate-pulse"></div>
                 <Dog size={120} className="text-cyan-400 relative z-10 drop-shadow-[0_0_15px_rgba(6,182,212,0.8)]" />
@@ -905,7 +871,6 @@ export default function App() {
             <Scanlines />
             {showComfort && (
                 <div className="absolute inset-0 z-[100] bg-black/90 backdrop-blur-md flex items-center justify-center p-6 animate-in fade-in duration-300">
-                    {/* ...existing comfort modal code... */}
                     <div className="bg-slate-900 border-2 border-pink-500 rounded-lg p-8 max-w-md w-full relative shadow-[0_0_50px_rgba(236,72,153,0.4)] text-center">
                         <button onClick={() => setShowComfort(false)} className="absolute top-4 right-4 text-slate-400 hover:text-white">
                             <X size={24} />
